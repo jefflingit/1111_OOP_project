@@ -209,15 +209,15 @@ public class MAB extends Department{
             System.out.println("尚未修群F");
         }
     }
-
+    @Override
     public void generalRequirement(ArrayList<Course> generalCourses){
         super.generalRequirement(generalCourses);
     }
-
+    @Override
     public void PERequirement(){
         super.PERequirement();
     }
-
+    @Override
     public void summarize(){
         System.out.println("-".repeat(100));
         System.out.println("<必修課程>");

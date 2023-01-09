@@ -78,7 +78,7 @@ public class ACCT extends Department {
             double credit;
 
             //群A
-            File file = new File("../必群修csv/會計系_群修A.csv");
+            File file = new File("會計系_群修A.csv");
             Scanner readFile = new Scanner(file);
 
             while (readFile.hasNext()) {
@@ -90,7 +90,7 @@ public class ACCT extends Department {
             readFile.close();
 
             //群B
-            file = new File("../必群修csv/會計系_群修B.csv");
+            file = new File("會計系_群修B.csv");
             readFile = new Scanner(file);
 
             while (readFile.hasNext()) {
@@ -147,14 +147,8 @@ public class ACCT extends Department {
         }
     }
 
-    public void generalRequirement(ArrayList<Course> generalCourses){
-        super.generalRequirement(generalCourses);
-    }
 
-    public void PERequirement(){
-        super.PERequirement();
-    }
-
+    @Override
     public void summarize(){
 
         System.out.println("-".repeat(100));
@@ -182,5 +176,13 @@ public class ACCT extends Department {
         System.out.println();
 
         super.graduationResult();
+    }
+    @Override
+    public void generalRequirement(ArrayList<Course> generalCourses){
+        super.generalRequirement(generalCourses);
+    }
+    @Override
+    public void PERequirement(){
+        super.PERequirement();
     }
 }

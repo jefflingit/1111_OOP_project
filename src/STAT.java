@@ -177,15 +177,15 @@ public class STAT extends Department{
             System.out.println("群C未滿");
         }
     }
-
+    @Override
     public void generalRequirement(ArrayList<Course> generalCourses){
         super.generalRequirement(generalCourses);
     }
-
+    @Override
     public void PERequirement(){
         super.PERequirement();
     }
-
+    @Override
     public void summarize(){
 
         System.out.println("-".repeat(100));

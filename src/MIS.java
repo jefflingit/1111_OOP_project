@@ -176,15 +176,15 @@ public class MIS extends Department{
             System.out.println("尚未修群C");
         }
     }
-
+    @Override
     public void generalRequirement(ArrayList<Course> generalCourses){
         super.generalRequirement(generalCourses);
     }
-
+    @Override
     public void PERequirement(){
         super.PERequirement();
     }
-
+    @Override
     public void summarize(){
 
         System.out.println("-".repeat(100));

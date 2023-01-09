@@ -1,3 +1,5 @@
+import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.File;
@@ -5,39 +7,43 @@ import java.io.FileNotFoundException;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException{
-
+    public static void main(String[] args) throws FileNotFoundException {
 
         // TODO Auto-generated method stub
+        String filename = "使用者已修課程_IB3.csv";
+        try (Scanner input = new Scanner(new File(filename))) {
+            File reader = new File(filename);
+            String[] deptScanInput = input.nextLine().split(" ");
+            String[] deptScanInput2 = deptScanInput[1].split(",");
+            String deptInput = deptScanInput2[0];
+            Department myDept = deptSelector(deptInput);
 
-        String filename = "使用者已修課程_IB.csv";
-        File reader =new File(filename);
-        Scanner input=new Scanner(reader);
-        String[] deptScanInput = input.nextLine().split(" ");
-        String[] deptScanInput2 = deptScanInput[1].split(",");
-        String deptInput=deptScanInput2[0];
-        Department myDept=deptSelector(deptInput);
+            while (input.hasNextLine()) {
+                try {
+                    String[] userInfo = input.next().split(",");
+                    String name = userInfo[0];
+                    double credits = Double.parseDouble(userInfo[1]);
+                    String category = userInfo[2];
+                    String subcategory = userInfo[3];
+                    if (subcategory.equals("none")) {
+                        Course newCourse = new Course(name, credits, category);
+                        myDept.addCourse(newCourse);
+                    } else {
+                        Course newCourse = new Course(name, credits, category, subcategory);
+                        myDept.addCourse(newCourse);
+                    }
+                } catch (NoSuchElementException noe) {
+                    System.out.println("\nerror");
+                }
 
-        while(input.hasNextLine()){
-            String [] userInfo = input.next().split(",");
-            String name = userInfo[0];
-            double credits = Double.parseDouble(userInfo[1]);
-            String category = userInfo[2];
-            String subcategory = userInfo[3];
-            if(subcategory.equals("none")){
-                Course newCourse=new Course(name,credits,category);
-                myDept.addCourse(newCourse);
-            }else{
-                Course newCourse=new Course(name,credits,category,subcategory);
-                myDept.addCourse(newCourse);
             }
 
+            myDept.summarize();
+            input.close();
+        } catch (IOException ex) {
+            System.out.println("\nI/O error");
         }
-
-        myDept.summarize();
-        input.close();
     }
-
     public static Department deptSelector(String dept){
         switch(dept){
             case "BA":
