@@ -4,6 +4,7 @@ public class Course {
     private String category="";
     private String subcateogry="";
 
+
     public Course(String name, double credits){
         this.name=name;
         this.credits=credits;

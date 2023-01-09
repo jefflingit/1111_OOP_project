@@ -32,14 +32,17 @@ public class BA extends Department  {
         }
         if(required==REQUIREDCREDITS){
             requirements.set(2, true);
-            System.out.println("required credits pass");
+            System.out.println("必修學分門檻已通過！");
         }else{
             requirements.set(2, false);
-            System.out.printf("total required credits:%.2f\n",required);
-            System.out.println("Following course are needed: ");
+            System.out.printf("應修 %.2f 學分\n",REQUIREDCREDITS);
+            System.out.printf("已修 %.2f 學分\n",required);
+            System.out.printf("尚缺 %.2f 學分\n",REQUIREDCREDITS-required);
+            System.out.println("需要補齊的必修課程： ");
             for (Course deptCourse: deptRequired){
                 System.out.print(deptCourse.getName()+" ");
             }
+            System.out.println();
         }
     }
 
@@ -50,10 +53,11 @@ public class BA extends Department  {
 
         if(selective>=SELECTIVENEED){
             requirements.set(3,true);
-            System.out.println("selective credits pass");
+            System.out.println("選修學分門檻已通過！");
         }else{
             requirements.set(3,false);
-            System.out.printf("total selective credits:%.2f\n",selective);
+            System.out.printf("應修 %.2f 學分\n",SELECTIVENEED);
+            System.out.printf("尚缺 %.2f 學分\n",SELECTIVENEED-selective);
 
         }
     }
@@ -67,33 +71,25 @@ public class BA extends Department  {
     }
 
     public void summarize(){
+
+        System.out.println("-".repeat(100));
+        System.out.println("<必修課程>");
+        System.out.println();
+        requiredJudgement(requireds);
+        System.out.println();
+        System.out.println("-".repeat(100));
+
+        System.out.println("<選修課程>");
+        System.out.println();
+        selectiveJudgement(selectives);
+        System.out.println();
+        System.out.println("-".repeat(100));
+
         PERequirement();
         generalRequirement(generalCourses);
-        requiredJudgement(requireds);
-        selectiveJudgement(selectives);
+        System.out.println();
 
-        int counter=0;
-        super.summarize();
-        if(counter==6){
-            System.out.println("meet all the requirement needed for graduation");
-        }else{
-            System.out.println("-".repeat(60));
-            for(boolean passed :requirements){
-                if(!passed){
-                    switch(requirements.indexOf(false)){
-                        case 0:
-                            System.out.printf("%.2f general course credits are needed\n",GENERALCREDITSNEEDED-generalCredits);
-                        case 1:
-                            System.out.printf("%.2f PE courses are needed\n",PECREDITSNEEDED-PE.size());
-                        case 2:
-                            System.out.printf("%.2f required credits are needed\n",REQUIREDCREDITS-required);
-                        case 3:
-                            System.out.printf("%.2f selective credits are needed\n",SELECTIVENEED-selective);
-                    }
-                    break;
-                }
-            }
-        }
+        super.graduationResult();
     }
 
 }

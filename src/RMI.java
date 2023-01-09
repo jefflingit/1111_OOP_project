@@ -35,11 +35,13 @@ public class RMI extends Department{
 
         if(required==REQUIREDCREDITS){
             requirements.set(2, true);
-            System.out.println("required credits pass");
+            System.out.println("必修學分門檻已通過！");
         }else{
             requirements.set(2, false);
-            System.out.printf("total required credits:%.2f\n",required);
-            System.out.println("Following course are needed: ");
+            System.out.printf("應修 %.2f 學分\n",REQUIREDCREDITS);
+            System.out.printf("已修 %.2f 學分\n",required);
+            System.out.printf("尚缺 %.2f 學分\n",REQUIREDCREDITS-required);
+            System.out.println("需要補齊的必修課程： ");
             for (Course deptCourse: deptRequired){
                 System.out.print(deptCourse.getName()+" ");
             }
@@ -54,11 +56,11 @@ public class RMI extends Department{
 
         if(selective>=SELECTIVENEED){
             requirements.set(3,true);
-            System.out.println("selective credits pass");
+            System.out.println("選修學分門檻已通過！");
         }else{
             requirements.set(3,false);
-            System.out.printf("total selective credits:%.2f\n",selective);
-
+            System.out.printf("應修 %.2f 學分\n",SELECTIVENEED);
+            System.out.printf("尚缺 %.2f 學分\n",SELECTIVENEED-selective);
         }
     }
 
@@ -67,7 +69,7 @@ public class RMI extends Department{
         try {
             String[] courseInfo;
             double credit;
-            File file = new File("../必群修csv/風管系_群修.csv");
+            File file = new File("風管系_群修.csv");
             Scanner readFile = new Scanner(file);
 
             //讀csv檔，並把科系要求的課程加進群修的arrayList
@@ -107,11 +109,12 @@ public class RMI extends Department{
 
         if (partiallyRequired>=9){
             requirements.set(4, true);
-            System.out.println("partiallyRequired credits pass");
+            System.out.println("群修學分門檻已通過！");
         } else {
             requirements.set(4, false);
-            System.out.printf(String.format("群修還缺 %.1f 學分",PARTIALLYREQUIREDCREDITS-partiallyRequired));
-            System.out.printf(String.format("請挑下面其中%.1f堂課修 \n",(PARTIALLYREQUIREDCREDITS-partiallyRequired)/3));
+            System.out.printf("已修 %.2f 學分\n",partiallyRequired);
+            System.out.printf(String.format("尚缺 %.2f 學分\n",PARTIALLYREQUIREDCREDITS-partiallyRequired));
+            System.out.printf(String.format("請挑以下其中 %.0f 堂課修習： \n",(PARTIALLYREQUIREDCREDITS-partiallyRequired)/3));
             for (Course deptCourse: deptPartiallyRequired){
                 System.out.print(deptCourse.getName()+" ");
             }
@@ -129,36 +132,31 @@ public class RMI extends Department{
 
     public void summarize(){
 
+        System.out.println("-".repeat(100));
+        System.out.println("<必修課程>");
+        System.out.println();
+        requiredJudgement(requireds);
+        System.out.println();
+        System.out.println("-".repeat(100));
+
+        System.out.println("<選修課程>");
+        System.out.println();
+        selectiveJudgement(selectives);
+        System.out.println();
+        System.out.println("-".repeat(100));
+
+        System.out.println("<群修課程>");
+        System.out.println();
+        partiallyRequiredJudgement(partiallyRequireds);
+        System.out.println();
+        System.out.println();
+        System.out.println("-".repeat(100));
+
         PERequirement();
         generalRequirement(generalCourses);
-        requiredJudgement(requireds);
-        selectiveJudgement(selectives);
-        partiallyRequiredJudgement(partiallyRequireds);
+        System.out.println();
 
-        int counter=0;
-        super.summarize();
-        if(counter==6){
-            System.out.println("meet all the requirement needed for graduation");
-        }else{
-            System.out.println("-".repeat(60));
-            for(boolean passed :requirements){
-                if(!passed){
-                    switch(requirements.indexOf(false)){
-                        case 0:
-                            System.out.printf("%.2f general course credits are needed\n",GENERALCREDITSNEEDED-generalCredits);
-                        case 1:
-                            System.out.printf("%.2f PE courses are needed\n",PECREDITSNEEDED-PE.size());
-                        case 2:
-                            System.out.printf("%.2f required credits are needed\n",REQUIREDCREDITS-required);
-                        case 3:
-                            System.out.printf("%.2f selective credits are needed\n",SELECTIVENEED-selective);
-                        case 4:
-                            System.out.printf("%.2f partially required credits are needed\n",PARTIALLYREQUIREDCREDITS-partiallyRequired);
-                    }
-                    break;
-                }
-            }
-        }
+        super.graduationResult();
     }
 
 }

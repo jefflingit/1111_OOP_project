@@ -93,13 +93,15 @@ public class Department {
         }
     }
 
+    double humanity=0;
+    double society=0;
+    double nature=0;
+    double chinese= 0;
+    double english=0;
+    double total=0;
+    int coreNum=0;
+
     public void generalRequirement(ArrayList<Course> generalCourses){
-        double humanity=0;
-        double society=0;
-        double nature=0;
-        double chinese= 0;
-        double english=0;
-        double total=0;
         ArrayList<Boolean>core=new ArrayList<Boolean>();
         ArrayList<Boolean>limitMarks=new ArrayList<Boolean>();
         for(int i=0;i<5;i++){
@@ -161,7 +163,6 @@ public class Department {
             generalCredits=humanity+society+nature+chinese+english;
         }
 
-        int coreNum=0;
         if(generalCredits>28){
 
             for(boolean mark:core){
@@ -170,12 +171,11 @@ public class Department {
                     requirements.set(1,passMark);
                     for(boolean num:core){
                         if(!num){
-                            coreNum++;
+                            coreNum = coreNum++;
                         }
                     }
                     passMark=false;
                     requirements.set(1,passMark);
-                    System.out.printf("%2d core general course needed\n",coreNum);
                 }else{
                     passMark=true;
                     requirements.set(1,passMark);
@@ -183,15 +183,17 @@ public class Department {
             }
             passMark=false;
             requirements.set(1,passMark);
-            System.out.printf("total general course credits: %.2f\n",generalCredits);
+            System.out.printf("\n已修 %.2f 學分\n",generalCredits);
+            System.out.printf("尚缺 %.2f 學分\n",28-generalCredits);
 
         }else{
             passMark=false;
             requirements.set(1,passMark);
-            System.out.printf("total general course credits: %.2f\n",generalCredits);
+            System.out.printf("\n已修 %.2f 學分\n",generalCredits);
+            System.out.printf("尚缺 %.2f 學分\n",28-generalCredits);
         }
         if (!passMark & coreNum>=3){
-            System.out.println("general course credits pass");
+            System.out.println("\n通識學分門檻已通過！");
         }
 
         //System.out.printf("%.2f general course credits needed\n",GENERALCREDITSNEEDED-generalCredits);
@@ -203,7 +205,6 @@ public class Department {
         if(course.getCredits()<min){
             return false;
         }else if(course.getCredits()>max){
-            System.out.printf("exceed %-4s higher limit\n",course.getSubcategory());
             return true;
         }else{
             return true;
@@ -216,7 +217,6 @@ public class Department {
             credits+=course.getCredits();
             return credits;
         }else if(course.getCredits()>max){
-            System.out.printf("exceed %-4s higher limit\n",course.getSubcategory());
             credits=max;
             return credits;
         }else{
@@ -238,6 +238,89 @@ public class Department {
                 counter++;
             }
             counter++;
+        }
+    }
+
+    public void graduationResult() {
+        int counter=0;
+        if(counter==6){
+            System.out.println("-".repeat(100));
+            System.out.println("/n恭喜您已完成所有畢業所需學分 畢業快樂！");
+        }else{
+            for(boolean passed :requirements){
+                System.out.println("-".repeat(100));
+                System.out.println("<通識及體育課程細項>");
+                if(!passed){
+                    switch(requirements.indexOf(false)){
+                        case 0:
+                            System.out.printf("\n體育已修 "+PE.size()+" 門");
+                            if (PE.size() >= 4) {
+                                System.out.println("\n已通過體育課修習標準");
+                            }else {
+                                System.out.printf("\n應再補齊 %.0f 門\n",PECREDITSNEEDED-PE.size());
+                            }
+                        case 1:
+                            System.out.printf("\n國文通識（3~6)\n");
+                            System.out.printf("已修 %.2f 學分\n",chinese);
+                            if (chinese < 3) {
+                                System.out.printf("低於下限 尚須 %.2f 學分\n", 3-chinese);
+                            }else if(chinese >= 6) {
+                                System.out.printf("已達上限 再繼續修也不算學分喔～\n");
+                            }else {
+                                System.out.printf("已過下限 還能修 %.2f 學分\n", 6-chinese);
+                            }
+
+                        case 2:
+                            System.out.printf("\n外文通識（4~6)\n");
+                            System.out.printf("已修 %.2f 學分\n", english);
+                            if (english < 3) {
+                                System.out.printf("低於下限 尚須 %.2f 學分\n", 4-english);
+                            }else if(english >= 6) {
+                                System.out.printf("已達上限 再繼續修也不算學分喔～\n");
+                            }else {
+                                System.out.printf("已過下限 還能修 %.2f 學分\n", 6-english);
+                            }
+
+                        case 3:
+                            System.out.printf("\n社會通識（3~9)\n");
+                            System.out.printf("已修 %.2f 學分\n",society);
+                            if (society < 3) {
+                                System.out.printf("低於下限 尚須 %.2f 學分\n", 3-society);
+                            }else if(society >= 9) {
+                                System.out.printf("已達上限 再繼續修也不算學分喔～\n");
+                            }else {
+                                System.out.printf("已過下限 還能修 %.2f 學分\n", 9-society);
+                            }
+                        case 4:
+                            System.out.printf("\n人文通識（3~9)\n");
+                            System.out.printf("已修 %.2f 學分\n",humanity);
+                            if (humanity < 3) {
+                                System.out.printf("低於下限 尚須 %.2f 學分\n", 3-humanity);
+                            }else if(humanity >= 9) {
+                                System.out.printf("已達上限 再繼續修也不算學分喔～\n");
+                            }else {
+                                System.out.printf("已過下限 還能修 %.2f 學分\n", 9-humanity);
+                            }
+                        case 5:
+                            System.out.printf("\n自然通識（4~9)\n");
+                            System.out.printf("已修 %.2f 學分\n",nature);
+                            if (nature < 3) {
+                                System.out.printf("低於下限 尚須 %.2f 學分\n", 4-nature);
+                            }else if(nature >= 9) {
+                                System.out.printf("已達上限 再繼續修也不算學分喔～\n");
+                            }else {
+                                System.out.printf("已過下限 還能修 %.2f 學分\n", 9-nature);
+                            }
+                        case 6:
+                            if (coreNum == 2) {
+                                System.out.println("\n核心通識已通過標準\n");
+                            }else {
+                                System.out.printf("\n尚缺 "+ (3-coreNum) +" 門核心通識\n");
+                            }
+                    }
+                    break;
+                }
+            }
         }
     }
 }
