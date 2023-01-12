@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class RMI extends Department{
@@ -13,7 +14,12 @@ public class RMI extends Department{
     double required=0;
     double partiallyRequired=0;
     double selective=0;
-
+    public void addRequire(String fileName)throws IOException {
+        super.addRequire(fileName,this.deptRequired);
+    }
+    public void addPartiallyRequired() throws IOException {
+        super.addRequire("deptRequired_CSV/RMI_partiallyRequiredA.csv",this.deptPartiallyRequired);
+         }
     public void requiredJudgement(ArrayList<Course> courses){
 
         //判斷使用者修習的必修課程跟系上的必修課程匹配的學分數
@@ -65,30 +71,7 @@ public class RMI extends Department{
     }
 
     //傳入系所規定的群修課程
-    public void addPartiallyRequired() {
-        try {
-            String[] courseInfo;
-            double credit;
-            File file = new File("風管系_群修.csv");
-            Scanner readFile = new Scanner(file);
 
-            //讀csv檔，並把科系要求的課程加進群修的arrayList
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptPartiallyRequired.add(course);
-            }
-            readFile.close();
-            //印出系上規定群修裡面的所有課程
-            //for (Course course: deptPartiallyRequired) {
-            //System.out.print(course.getName()+" "+course.getCredits());
-            //System.out.println();
-            //}
-        }catch(FileNotFoundException e){
-            System.out.print("File Not Found");
-        }
-    }
 
 
     public void partiallyRequiredJudgement(ArrayList<Course> courses){

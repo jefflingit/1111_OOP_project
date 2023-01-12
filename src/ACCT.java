@@ -1,7 +1,5 @@
+import java.io.IOException;
 import java.util.ArrayList;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 public class ACCT extends Department {
     final double REQUIREDCREDITS=65.0;
@@ -22,6 +20,16 @@ public class ACCT extends Department {
     double partiallyRequiredCredits1=0;
     double partiallyRequiredCredits2=0;
     double selective=0;
+
+    public void addRequire(String fileName)throws IOException{
+        super.addRequire(fileName,this.deptRequired);
+    }
+
+    //傳入系所規定的群修課程
+    public void addPartiallyRequired() throws IOException {
+        super.addRequire("deptRequired_CSV/ACCT_partiallyRequiredA.csv",this.deptPartiallyRequired1);
+        super.addRequire("deptRequired_CSV/ACCT_partiallyRequiredB.csv",this.deptPartiallyRequired2);
+    }
 
     public void requiredJudgement(ArrayList<Course> courses){
 
@@ -67,42 +75,6 @@ public class ACCT extends Department {
             requirements.set(3,false);
             System.out.printf("應修 %.2f 學分\n",SELECTIVENEED);
             System.out.printf("尚缺 %.2f 學分\n",SELECTIVENEED-selective);
-        }
-    }
-
-    //傳入系所規定的群修課程
-    public void addPartiallyRequired() {
-
-        try {
-            String[] courseInfo;
-            double credit;
-
-            //群A
-            File file = new File("會計系_群修A.csv");
-            Scanner readFile = new Scanner(file);
-
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptPartiallyRequired1.add(course);
-            }
-            readFile.close();
-
-            //群B
-            file = new File("會計系_群修B.csv");
-            readFile = new Scanner(file);
-
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptPartiallyRequired2.add(course);
-            }
-            readFile.close();
-
-        }catch(FileNotFoundException e){
-            System.out.print("File Not Found");
         }
     }
 

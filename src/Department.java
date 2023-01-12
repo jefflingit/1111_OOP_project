@@ -1,9 +1,10 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Department {
+    public static final String UTF8_BOM = "\uFEFF";
     protected ArrayList<Course> generalCourses=new ArrayList<Course>();
     protected ArrayList<Course> PE=new ArrayList<Course>();
     //儲存使用者已修的必修課程
@@ -36,31 +37,22 @@ public class Department {
 
     //用傳入csv檔案的方式設定該科系的必修課程
 
-    public void addRequire(String fileName) {
-        File file = new File(fileName);
-
-        try {
-            String[] courseInfo;
-            double credit;
-            Scanner readFile = new Scanner(file);
-
-            //讀csv檔，並把科系要求的課程加進deptRequired
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptRequired.add(course);
-            }
-            readFile.close();
-            //印出deptRequired裡面的所有課程
-            //for (Course course: deptRequired) {
-            //System.out.print(course.getName()+" "+course.getCredits());
-            //System.out.println();
-            //}
-
-        }catch(FileNotFoundException e){
-            System.out.print("File Not Found");
+    public void addRequire(String fileName,ArrayList<Course> courses) throws IOException{
+        FileInputStream fis = new FileInputStream(fileName);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis,"UTF8"));
+        String line;
+        boolean firstLine = true;
+        String[] courseInfo;
+        double credit;
+        while((line=br.readLine())!=null)
+        {
+            if(firstLine) line = removeUTF8BOM(line);
+            courseInfo = line.split(",");
+            credit = Double.parseDouble(courseInfo[1]);
+            Course course = new Course(courseInfo[0], credit);
+            courses.add(course);
         }
+        br.close();
     }
 
     public void addCourse(Course course){
@@ -323,4 +315,11 @@ public class Department {
             }
         }
     }
+    private static String removeUTF8BOM(String s) {
+        if (s.startsWith(UTF8_BOM)) {
+            s = s.substring(1); // 如果 String 是以 BOM 開頭, 則省略字串最前面的第一個 字元.
+        }
+        return s;
+    }
+
 }

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +15,9 @@ public class BA extends Department  {
     double partiallyRequired=0;
     double selective=0;
 
+    public void addRequire(String fileName)throws IOException {
+        super.addRequire(fileName,this.deptRequired);
+    }
     public void requiredJudgement(ArrayList<Course> courses){
         //判斷使用者修習的必修課程跟系上的必修課程匹配的學分數
         //建立arrayList儲存有匹配的index

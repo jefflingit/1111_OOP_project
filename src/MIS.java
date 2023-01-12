@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,7 +28,14 @@ public class MIS extends Department{
     double partiallyRequiredCredits2=0;
     double partiallyRequiredCredits3=0;
     double selective=0;
-
+    public void addRequire(String fileName)throws IOException {
+        super.addRequire(fileName,this.deptRequired);
+    }
+    public void addPartiallyRequired() throws IOException {
+        super.addRequire("deptRequired_CSV/MIS_partiallyRequiredA.csv",this.deptPartiallyRequired1);
+        super.addRequire("deptRequired_CSV/MIS_partiallyRequiredB.csv",this.deptPartiallyRequired2);
+        super.addRequire("deptRequired_CSV/MIS_partiallyRequiredC.csv",this.deptPartiallyRequired3);
+           }
     public void requiredJudgement(ArrayList<Course> courses){
         //儲存重複課程的index
         ArrayList<Integer> storeIndex = new ArrayList<Integer>();
@@ -75,52 +83,7 @@ public class MIS extends Department{
         }
     }
 
-    //傳入系所規定的群修課程
-    public void addPartiallyRequired() {
-        try {
-            String[] courseInfo;
-            double credit;
-            //群A
-            File file = new File("資管系_群修A.csv");
-            Scanner readFile = new Scanner(file);
 
-            //讀csv檔，並把科系要求的課程加進群修A的arrayList
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptPartiallyRequired1.add(course);
-            }
-            readFile.close();
-
-            //群B
-            file = new File("資管系_群修B.csv");
-            readFile = new Scanner(file);
-
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptPartiallyRequired2.add(course);
-            }
-            readFile.close();
-
-            //群C
-            file = new File("資管系_群修C.csv");
-            readFile = new Scanner(file);
-
-            while (readFile.hasNext()) {
-                courseInfo = readFile.next().split(",");
-                credit = Double.parseDouble(courseInfo[1]);
-                Course course = new Course(courseInfo[0],credit);
-                deptPartiallyRequired3.add(course);
-            }
-            readFile.close();
-
-        }catch(FileNotFoundException e){
-            System.out.print("File Not Found");
-        }
-    }
 
     public void partiallyRequiredJudgement(ArrayList<Course> courses){
 
