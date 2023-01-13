@@ -1,5 +1,9 @@
 # 1111_OOP_project
+* this repo is a final project on OOP course.
+## Class Diagram
 ![Class Diagram](https://github.com/jefflingit/1111_OOP_project/blob/master/class%20diagram.png)
+
+## Project Description
 ![image](https://user-images.githubusercontent.com/71614609/212284421-8db3ae7f-b377-4c78-b277-6149a14085f9.png)
 ![image](https://user-images.githubusercontent.com/71614609/212283643-75595aea-5696-4858-a576-6a748c6b82a0.png)
 ![image](https://user-images.githubusercontent.com/71614609/212283674-3c35e51e-af23-4b9e-9a3d-5df52f208220.png)
