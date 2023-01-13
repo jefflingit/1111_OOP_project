@@ -4,75 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afe94b09-c4ca-4c9c-8cfd-fe6ae4662d40" name="Changes" comment="09:16 -third commit-add override annotation">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/ACCT_partiallyRequiredA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/ACCT_partiallyRequiredB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/ACCT_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/BA_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/FIN_partiallyRequired.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/FIN_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/IB_partiallyRequired.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/IB_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MAB_partiallyRequiredA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MAB_partiallyRequiredB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MAB_partiallyRequiredC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MAB_partiallyRequiredF.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MAB_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MIS_partiallyRequiredA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MIS_partiallyRequiredB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MIS_partiallyRequiredC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/MIS_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/RMI_partiallyRequired.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/RMI_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/STAT_partiallyRequiredA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/STAT_partiallyRequiredB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/STAT_partiallyRequiredC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deptRequired_csv/STAT_required.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_project.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_IB.csv" afterDir="false" />
+    <list default="true" id="afe94b09-c4ca-4c9c-8cfd-fe6ae4662d40" name="Changes" comment="01/12 -chinese encoding problem solved -merge v0107 into master">
+      <change afterPath="$PROJECT_DIR$/class diagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACCT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACCT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MAB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RMI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/STAT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/企管系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/使用者已修課程_ACCT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/使用者已修課程_IB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/使用者已修課程_IB2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/使用者已修課程_IB3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/國貿系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/國貿系_群修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/會計系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/會計系_群修A.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/會計系_群修B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/統計系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/統計系_群修A.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/統計系_群修B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/統計系_群修C.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/財管系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/財管系_群修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/資管系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/資管系_群修A.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/資管系_群修B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/資管系_群修C.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/金融系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/金融系_群修A.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/金融系_群修B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/金融系_群修C.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/金融系_群修F.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/風管系_必修.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/風管系_群修.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -172,7 +107,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673270211012</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="01/12 -chinese encoding problem solved -merge v0107 into master">
+      <created>1673510403409</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673510403409</updated>
+    </task>
+    <task id="LOCAL-00005" summary="01/12 -chinese encoding problem solved -merge v0107 into master">
+      <created>1673510537776</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673510537776</updated>
+    </task>
+    <task id="LOCAL-00006" summary="01/12 -chinese encoding problem solved -merge v0107 into master">
+      <created>1673510600290</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673510600290</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +147,8 @@
     <MESSAGE value="08:09 -first commit" />
     <MESSAGE value="08:36 -second commit-modified output" />
     <MESSAGE value="09:16 -third commit-add override annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="09:16 -third commit-add override annotation" />
+    <MESSAGE value="01/12 -chinese encoding problem solved -merge v0107 into master" />
+    <option name="LAST_COMMIT_MESSAGE" value="01/12 -chinese encoding problem solved -merge v0107 into master" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -212,7 +169,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>8</line>
-          <properties class="Main" method="main">
+          <properties class="Main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
