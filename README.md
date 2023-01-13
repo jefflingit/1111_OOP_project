@@ -1,5 +1,6 @@
 # 1111_OOP_project
-![image](https://user-images.githubusercontent.com/71614609/212283464-3f07c2b0-efe0-400c-8728-533b352b07d0.png)
+![Class Diagram](https://github.com/jefflingit/1111_OOP_project/blob/master/class%20diagram.png)
+![image](https://user-images.githubusercontent.com/71614609/212284421-8db3ae7f-b377-4c78-b277-6149a14085f9.png)
 ![image](https://user-images.githubusercontent.com/71614609/212283643-75595aea-5696-4858-a576-6a748c6b82a0.png)
 ![image](https://user-images.githubusercontent.com/71614609/212283674-3c35e51e-af23-4b9e-9a3d-5df52f208220.png)
 ![image](https://user-images.githubusercontent.com/71614609/212283711-4f8b23ca-7015-4c66-90d8-16794420bb2f.png)
@@ -19,5 +20,4 @@
 ![image](https://user-images.githubusercontent.com/71614609/212284139-637c39a0-10ed-4179-964e-086b9caeb717.png)
 ![image](https://user-images.githubusercontent.com/71614609/212284263-c3b7b917-8cb7-4520-beee-61e00a497e4e.png)
 ![image](https://user-images.githubusercontent.com/71614609/212284291-d7837376-883e-4710-8d7a-4ca24eb5258d.png)
-![Class Diagram](https://github.com/jefflingit/1111_OOP_project/blob/master/class%20diagram.png)
 
