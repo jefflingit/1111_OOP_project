@@ -5,38 +5,106 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class STAT extends Department{
+    /**
+     * The required credits that are needed
+     */
     final double REQUIREDCREDITS=45.0;
+    /**
+     * The partially required credits that are needed
+     */
     final double PARTIALLYREQUIREDCREDITS=15.0;
+    /**
+     * The partially required credits of category A that are needed
+     */
+
     final double PARTIALLYREQUIREDCREDITSA=3.0;
+    /**
+     * The partially required credits of category B that are needed
+     */
     final double PARTIALLYREQUIREDCREDITSB=6.0;
+    /**
+     * The partially required credits of category Cc that are needed
+     */
     final double PARTIALLYREQUIREDCREDITSC=6.0;
+    /**
+     * Total credits that are needed to graduate
+     */
     final double TOTALCREDITS=128.0;
+    /**
+     * The selectives credits that are needed
+     */
     final double SELECTIVENEED=TOTALCREDITS-PARTIALLYREQUIREDCREDITS-REQUIREDCREDITS-GENERALCREDITSNEEDED;
 
     //儲存系上規定之群修
+    /**
+     * The ArrayList to store the courses of the department partially required of category A that are needed
+     */
     private ArrayList<Course> deptPartiallyRequired1=new ArrayList<Course>();
+    /**
+     * The ArrayList to store the courses of the department partially required of category B that are needed
+     */
     private ArrayList<Course> deptPartiallyRequired2=new ArrayList<Course>();
+    /**
+     * The ArrayList to store the courses of the department partially required of category C that are needed
+     */
     private ArrayList<Course> deptPartiallyRequired3=new ArrayList<Course>();
     //儲存使用者修過的群
+    /**
+     * Store partiallyRequired courses of category A that the student took.
+     */
     private ArrayList<Course> partiallyRequired1=new ArrayList<Course>();
+    /**
+     * Store partiallyRequired courses of category B that the student took.
+     */
     private ArrayList<Course> partiallyRequired2=new ArrayList<Course>();
+    /**
+     * Store partiallyRequired courses of category C that the student took.
+     */
     private ArrayList<Course> partiallyRequired3=new ArrayList<Course>();
-
+    /**
+     * The required credits that user has take
+     */
     double required=0;
     //儲存群修修習的總學分數
+    /**
+     * The partially required credits of category A that user has taken
+     */
     double partiallyRequiredCredits1=0;
+    /**
+     * The partially required credits of category B that user has taken
+     */
     double partiallyRequiredCredits2=0;
+    /**
+     * The partially required credits of category C that user has taken
+     */
     double partiallyRequiredCredits3=0;
+    /**
+     * The selective credits that user has taken
+     */
     double selective=0;
+    /**
+     * Use the super method to add requiredCredits threshold information to MAB.
+     * @param fileName
+     * @throws IOException
+     */
     public void addRequire(String fileName)throws IOException {
         super.addRequire(fileName,this.deptRequired);
     }
 
     //傳入系所規定的群修課程
+    /**
+     * Use the super method to add partiallyRequiredCredits threshold information to STAT.
+     * @throws IOException
+     */
     public void addPartiallyRequired() throws IOException {
-        super.addRequire("deptRequired_CSV/STAT_partiallyRequiredA.csv",this.deptPartiallyRequired1);
-        super.addRequire("deptRequired_CSV/STAT_partiallyRequiredB.csv",this.deptPartiallyRequired2);
+        super.addRequire("STAT_partiallyRequiredA.csv",this.deptPartiallyRequired1);
+        super.addRequire("STAT_partiallyRequiredB.csv",this.deptPartiallyRequired2);
     }
+
+    /**
+     * Test the "required" courses and credits between student took and threshold (build ArrayList<Integer>, if the student has taken that class, remove the index of the class) ,and print out the credits information of required needs.
+     * @param courses
+     */
     public void requiredJudgement(ArrayList<Course> courses){
         //儲存重複課程的index
         ArrayList<Integer> storeIndex = new ArrayList<Integer>();
@@ -69,6 +137,10 @@ public class STAT extends Department{
         }
     }
 
+    /**
+     * Test whether the student meet the threshold of selective credits and print out the credits information of selective needs.
+     * @param courses
+     */
     public void selectiveJudgement(ArrayList<Course> courses){
         for(Course course:courses){
             selective+=course.getCredits();
@@ -84,9 +156,10 @@ public class STAT extends Department{
     }
 
     //傳入系所規定的群修課程
-
-
-
+    /**
+     * Store course-taken information to the subcategories of different ArrayLists and test whether the student meet the threshold of PartiallyRequired credits and print out the credits information of partiallyRequired needs.
+     * @param courses
+     */
     public void partiallyRequiredJudgement(ArrayList<Course> courses){
 
         //將使用者修過的群修分別存入進群ABC
@@ -141,15 +214,28 @@ public class STAT extends Department{
             System.out.println("群C未滿");
         }
     }
+
     @Override
+    /**
+     * Override the super generalRequirement method of class Department.
+     * @Override
+     */
     public void generalRequirement(ArrayList<Course> generalCourses){
         super.generalRequirement(generalCourses);
     }
     @Override
+    /**
+     * Override the super PERequirement method of class Department.
+     * @Override
+     */
     public void PERequirement(){
         super.PERequirement();
     }
     @Override
+    /**
+     * Override the super summarize method of class Department.
+     * @Override
+     */
     public void summarize(){
 
         System.out.println("-".repeat(100));

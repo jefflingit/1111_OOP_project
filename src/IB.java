@@ -5,19 +5,51 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class IB extends Department {
+    /**
+     * The required credits that are needed
+     */
     final double REQUIREDCREDITS=48.0;
+    /**
+     * The partially required credits that are needed
+     */
     final double PARTIALLYREQUIREDCREDITS=9.0;
+    /**
+     * Total credits that are needed to graduate
+     */
     final double TOTALCREDITS=128.0;
+    /**
+     * The selectives credits that are needed
+     */
     final double SELECTIVENEED=TOTALCREDITS-PARTIALLYREQUIREDCREDITS-REQUIREDCREDITS-GENERALCREDITSNEEDED;
     //儲存系上規定之群修
+    /**
+     * The ArrayList to store the courses of the department partially required of category A that are needed
+     */
     private ArrayList<Course> deptPartiallyRequired=new ArrayList<Course>();
+    /**
+     * The required credits that user has take
+     */
     double required=0;
+    /**
+     * The partially required credits that user has taken
+     */
     double partiallyRequired=0;
+    /**
+     * The selective credits that user has taken
+     */
     double selective=0;
-
+    /**
+     * Use the super method to add requiredCredits threshold information to MAB.
+     * @param fileName
+     * @throws IOException
+     */
     public void addRequire(String fileName)throws IOException {
         super.addRequire(fileName,this.deptRequired);
     }
+    /**
+     *Use the super method to add partiallyRequiredCredits threshold information to ACCT.
+     * @throws IOException
+     */
     public void addPartiallyRequired() throws IOException {
         super.addRequire("deptRequired_CSV/IB_partiallyRequired.csv",this.deptPartiallyRequired);
     }

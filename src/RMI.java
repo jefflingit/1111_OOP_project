@@ -4,22 +4,62 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class RMI extends Department{
+    /**
+     * The required credits that are needed
+     */
     final double REQUIREDCREDITS=65.0;
+    /**
+     * The partially required credits that are needed
+     */
     final double PARTIALLYREQUIREDCREDITS=3.0;
+    /**
+     * Total credits that are needed to graduate
+     */
     final double TOTALCREDITS=128.0;
+    /**
+     * The selectives credits that are needed
+     */
     final double SELECTIVENEED=TOTALCREDITS-PARTIALLYREQUIREDCREDITS-REQUIREDCREDITS-GENERALCREDITSNEEDED;
 
     //儲存系上規定之群修
+    /**
+     * The ArrayList to store the courses of the department partially required that are needed
+     */
     private ArrayList<Course> deptPartiallyRequired=new ArrayList<Course>();
+    /**
+     * The required credits that user has take
+     */
     double required=0;
+    /**
+     * The partially required credits that user has taken
+     */
     double partiallyRequired=0;
+    /**
+     * The selective credits that user has taken
+     */
     double selective=0;
+
+    /**
+     * Use the super method to add requiredCredits threshold information to RMI.
+     * @param fileName
+     * @throws IOException
+     */
     public void addRequire(String fileName)throws IOException {
         super.addRequire(fileName,this.deptRequired);
     }
+
+    /**
+     * Use the super method to add partiallyRequiredCredits threshold information to RMI.
+     * @throws IOException
+     */
     public void addPartiallyRequired() throws IOException {
-        super.addRequire("deptRequired_CSV/RMI_partiallyRequiredA.csv",this.deptPartiallyRequired);
-         }
+        super.addRequire("RMI_partiallyRequiredA.csv",this.deptPartiallyRequired);
+    }
+
+    /**
+     * Test the "required" courses and credits between student took and threshold (build ArrayList<Integer>, if the student has taken that class, remove the index of the class) ,and print out the credits information of required needs.
+     * @param courses
+     */
     public void requiredJudgement(ArrayList<Course> courses){
 
         //判斷使用者修習的必修課程跟系上的必修課程匹配的學分數
@@ -54,7 +94,10 @@ public class RMI extends Department{
         }
     }
 
-
+    /**
+     * Test whether the student meet the threshold of selective credits and print out the credits information of selective needs.
+     * @param courses
+     */
     public void selectiveJudgement(ArrayList<Course> courses){
         for(Course course:courses){
             selective+=course.getCredits();
@@ -71,9 +114,10 @@ public class RMI extends Department{
     }
 
     //傳入系所規定的群修課程
-
-
-
+    /**
+     * Store course-taken information to the ArrayList and test whether the student meet the threshold of PartiallyRequired credits and print out the credits information of partiallyRequired needs.
+     * @param courses
+     */
     public void partiallyRequiredJudgement(ArrayList<Course> courses){
 
         ArrayList<Integer>storeIndex = new ArrayList<Integer>();
@@ -105,14 +149,26 @@ public class RMI extends Department{
         System.out.printf("\n");
     }
     @Override
+    /**
+     * Override the super generalRequirement method of class Department.
+     * @Override
+     */
     public void generalRequirement(ArrayList<Course> generalCourses){
         super.generalRequirement(generalCourses);
     }
     @Override
+    /**
+     * Override the super PERequirement method of class Department.
+     * @Override
+     */
     public void PERequirement(){
         super.PERequirement();
     }
     @Override
+    /**
+     * Override the super summarize method of class Department.
+     * @Override
+     */
     public void summarize(){
 
         System.out.println("-".repeat(100));

@@ -4,9 +4,114 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afe94b09-c4ca-4c9c-8cfd-fe6ae4662d40" name="Changes" comment="01/12 -chinese encoding problem solved -merge v0107 into master">
-      <change afterPath="$PROJECT_DIR$/class diagram.png" afterDir="false" />
+    <list default="true" id="afe94b09-c4ca-4c9c-8cfd-fe6ae4662d40" name="Changes" comment="01/12 -class diagram">
+      <change afterPath="$PROJECT_DIR$/class-use/ACCT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/BA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/Course.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/Department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/FIN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/IB.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/MAB.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/MIS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/Main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/RMI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class-use/STAT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/ACCT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/ACCT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/BA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/Course.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/Department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/FIN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/IB.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/MAB.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/MIS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/Main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/RMI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/class-use/STAT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/legal/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/legal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/legal/jquery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/legal/jqueryUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/script-dir/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/script-dir/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/script-dir/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java doc/tag-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/ACCT.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/BA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/BA.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Course.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/Course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Department.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/Department.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/FIN.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/FIN.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/IB.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/IB.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/MAB.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/MAB.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/MIS.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/MIS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/RMI.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/RMI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/STAT.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/STAT.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/copy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/copy.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/jquery-ui.overrides.css" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/jquery-ui.overrides.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/module-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/module-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/package-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/search-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/search-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/java doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ACCT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACCT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MAB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MAB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MIS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RMI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/STAT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +164,7 @@
       <recent name="C:\Users\jefflin\Desktop\intelij_workingspace\final_project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jefflin\Desktop\intelij_workingspace\final_project\java doc" />
       <recent name="C:\Users\jefflin\Desktop\intelij_workingspace\final_project" />
       <recent name="C:\Users\jefflin\Desktop\intelij_workingspace\final_project\src" />
     </key>
@@ -128,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673510600290</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="01/12 -class diagram">
+      <created>1673512755278</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673512755278</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,7 +261,8 @@
     <MESSAGE value="08:36 -second commit-modified output" />
     <MESSAGE value="09:16 -third commit-add override annotation" />
     <MESSAGE value="01/12 -chinese encoding problem solved -merge v0107 into master" />
-    <option name="LAST_COMMIT_MESSAGE" value="01/12 -chinese encoding problem solved -merge v0107 into master" />
+    <MESSAGE value="01/12 -class diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="01/12 -class diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,7 +273,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/MAB.java</url>
-          <line>171</line>
+          <line>275</line>
           <properties class="MAB" method="summarize">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -168,8 +282,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>8</line>
-          <properties class="Main">
+          <line>11</line>
+          <properties class="Main" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -177,7 +291,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>12</line>
+          <line>15</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
